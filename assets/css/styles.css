@@ -1,0 +1,218 @@
+:root {
+    --blue-grotto: #189AB4;
+    --blue-g-darker: #157183;
+    --navy-blue: #05445E;
+    --mischka: #DADADE;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--navy-blue);
+}
+.inicial-screen {
+    position: absolute;
+    height: 350px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--mischka);
+    border-radius: 15px;
+}
+.btn-start {
+    font-size: 20px;
+    padding: 20px 25px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--blue-grotto);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 190ms ease-in-out;
+}
+.btn-start:hover {
+    background-color: var(--blue-g-darker);
+}
+footer {
+    position: relative;
+    text-align: center;
+    bottom: -25%;
+}
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+.title {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 2.2em;
+}
+.selector {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--blue-grotto);
+    height: 70px;
+    width: 300px;
+    transition: all 300ms ease;
+}
+.oturn, .xturn {
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
+}
+.selector .slider {
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    width: 45%;
+    height: 85%;
+    background-color: var(--mischka);
+    border-radius: 100px;
+    transition: all 300ms ease;
+    z-index: 0;
+}
+.selector .slider.oactive {
+    left: 53%;
+}
+.selector .slider.xactive {
+    left: 3%;
+}
+#main-content {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--navy-blue);
+    border-radius: 13px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 13px;
+}
+#main-content div {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    background-color: var(--blue-grotto);
+}
+#main-content div:hover {
+    background-color: var(--blue-g-darker);
+}
+img {
+    position: relative;
+    top: 3%;
+    left: 2%;
+    height: 190px;
+    width: 190px;
+    z-index: 1;
+}
+.result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 600px;
+    background-color: var(--mischka);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.result-box p {
+    font-size: 43px;
+}
+.result-box .btn-restart {
+    font-size: 20px;
+    padding: 20px 25px;
+    background-color: var(--blue-grotto);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 190ms ease-in-out;
+}
+.btn-restart:hover {
+    background-color: var(--blue-g-darker);
+}
+
+/* responsive layout */
+@media (max-height: 888px) {
+
+    .inicial-screen {
+        height: calc(fit-content + 30px);
+        width: 300px;
+    }
+    footer {
+        bottom: -40%;
+    }
+    .title { 
+        margin-top: 15px;
+        font-size: 1.6em;
+    }
+    .selector {
+        height: 45px;
+        width: 190px;
+    }
+    .oturn, .xturn {
+        font-size: 18px;
+    }
+    #main-content {
+        height: auto;
+        width: auto;
+        grid-gap: 9px;
+    }
+    #main-content div {
+        width: 100px;
+        height: 100px;
+    }
+    img {
+        top: 3%;
+        left: 2%;
+        height: 90px;
+        width: 90px;
+    }
+    .result-box {
+        top: 50%;
+        left: 50%;
+        height: 280px;
+        width: 300px;
+    }
+    .result-box p {
+        font-size: 40px;
+    }
+}
+@media (min-width: 250px) and (max-width: 320px) {
+    #main-content {
+        height: 85px;
+        width: 85px;
+        left: 23%;
+        grid-gap: 9px;
+    }
+    #main-content div {
+        width: 85px;
+        height: 85px;
+    }
+    img {
+        top: 1%;
+        left: 2%;
+        height: 80px;
+        width: 80px;
+    }
+}

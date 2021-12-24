@@ -11,4 +11,4 @@ O principal intuito da criação desse jogo foi o de pôr em prática o conteúd
 Nesse projeto foi usado Javascript puro, CSS e HTML.
 
 ##
-(https://inocencio5117.github.io/Tic-Tac-Toe-in-Javascript/)[Link de acesso]
+[Link de acesso](https://inocencio5117.github.io/Tic-Tac-Toe-in-Javascript/)
